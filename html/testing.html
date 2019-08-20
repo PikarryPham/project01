@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="#">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="../logo/logo.png">
+    <title>BEFORE AND AFTTER</title>
+</head>
+<style>
+    .contain{
+        height: 200px;
+        width: 400px;
+        background: lightcoral;
+        margin: 50px auto;
+        position: relative;
+    }
+    .contain::before{
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        /*width: 40px;*/
+        /*Neu chi su dung border-bottom, no k hieu duoc border co width la bao nhieu, cac border left, top, right cung k biet width la bao nhieu nen khai bao border-bottom se bi loi*/
+        /* background: black; */
+        /*border-bottom: 20px solid black;*/
+        /*border-width: 50px; 
+        border-style: solid; 
+        border-color: transparent transparent black;*/
+        border: 20px solid lightcoral;
+        border-color: transparent transparent lightcoral transparent;
+    }
+    .test{
+        height: 200px;
+        width: 400px;
+        background: yellow;
+        margin: 50px auto;
+        position: relative;
+    }
+    /*.test::before{
+        content: '';
+        position: absolute;
+        width: 400px;
+        heihgt: 200px;
+        top: 0;
+        left: 0;
+        border: 20px solid black;
+        border-color: black transparent transparent black;
+    }*/
+</style>
+<body>
+    <section>
+        <div class="contain"></div>
+        <div class="test"></div>
+    </section>
+</body>
+</html>

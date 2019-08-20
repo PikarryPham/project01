@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/FIXdemo04.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../logo/logo.png">
+    <title>Favourites</title>
+</head>
+<body>
+    
+    <section class="contenting">
+        <div class="side" id="hello">
+            <div class="closebtn" id="closebtn">
+                <span><i class="fas fa-times"></i></span>
+            </div>
+            <div class="menu-item">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <div class="menu-title">
+                <a href="../html/demo01.html" target="_blank">Home</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <span class="icon"><i class="fas fa-scroll"></i></span>
+            <div class="menu-title">
+                <a href="../html/demo03.html" target="_blank">Recommend</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <span class="icon"><i class="fas fa-calendar-minus"></i></span>
+            <div class="menu-title">
+                <a href="FIXdemo04.html" target="_blank">New Release</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <span class="icon"><i class="fas fa-level-up-alt"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Forums</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <span class="icon"><i class="fas fa-gamepad"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Video Games</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <span class="icon"><i class="fas fa-comment-dots"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Rate Us</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <span class="icon"><i class="fas fa-heart"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Favourites</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <span class="icon"><i class="fas fa-history"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">History</a>
+            </div>
+            </div>
+            <div class="menu-item">
+            <div class="menu-title" >
+                <p id="p-menutitle">You can visit me on</p>
+            </div>
+            </div>
+            <div class="menu-item">
+            <div class="menu-title">
+                <ul class="special">
+                    <li><a href="#" target="blank"><i class="fab fa-reddit-square"></i></a></li>
+                    <li><a href="https://www.facebook.com/hocvienkmin/" target="blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.kmin.edu.vn/" target="blank"><i class="fas fa-hashtag"></i></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="subchild">
+                <div class="arrows">
+                    <img id="hbg" src="../logo/logo.png" alt="logokmin">  
+                </div>
+                <div class="slideshow">
+                    <img class="slides" src="../WallaperforProject1Demo01/hoenn-pokemon-go-4k-62.jpg" style="width: 100%" alt="Pokemon Go">
+                    <img class="slides" src="../WallaperforProject1Demo01/pokemonzapdos.jpg" style="width: 100%" alt="Pokemon Zapdos">
+                    <img class="slides" src="../WallaperforProject1Demo01/pokemonvalor.jpg" style="width: 100%" alt="Pokemon Moltres">
+                    <img class="slides" src="../WallaperforProject1Demo01/pokemonmystic.jpg" style="width: 100%" alt="Pokemon Articuno">
+                </div>
+                <div class="dotted">
+                    <div class="dot" onclick="currentslide(0)"></div>
+                    <div class="dot" onclick="currentslide(1)"></div>
+                    <div class="dot" onclick="currentslide(2)"></div>
+                    <div class="dot" onclick="currentslide(3)"></div>
+                </div>
+                <div class="subbutton">
+                        <div class="button1">
+                            <button><a href="https://www.youtube.com/watch?v=yQCREgz4tQY">Trailer</a></button>
+                        </div>
+                        <div class="button2" style="margin-left: 20px">
+                            <i class="far fa-bookmark"></i>
+                        </div>
+                        <div class="button2">
+                            <i class="far fa-heart"></i>
+                        </div>
+                        <div class="button2 a2a_kit a2a_default_style">
+                            <a class="a2a_button_facebook">
+                                <i class="fas fa-share-alt"></i>
+                            </a>
+                        </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                </div>
+                <div class="picture">
+                    <div class="avatar">
+                        <div class="image"></div>
+                    </div>
+                    <div class="picture-text">
+                        <div class="subpicture-text">
+                            <div class="picture-child">
+                                <h3>Platform</h3>
+                                <p>Android/iOS</p>
+                            </div>
+                            <div class="picture-child">
+                                <h3>Followers</h3>
+                                <div class="sub-picturechild" id="text"></div>
+                            </div>
+                            <script>
+                                var counting = document.getElementById("text");
+                                count = 100;
+                                function increasing()
+                                {
+                                    count += 4;
+                                    counting.innerHTML = count + "K";
+                                    counting.style.fontSize = "20px";
+                                    counting.style.fontStyle ="italic";
+                                    if(count >= 720)
+                                    {
+                                        clearInterval(setting);
+                                    }
+                                }
+                                var setting = setInterval(increasing,30);
+                            </script>
+                            <div class="picture-child">
+                                <h3 style="white-space: nowrap;">Release Day</h3>
+                                <p>01/01/2016</p>
+                            </div>
+                        </div>
+                        <div class="subpicture-text">
+                            <h2>POKEMON GO</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="opacity">
+                    <div class="opatext">
+                        <div class="subopatext" onclick="showtab(0)">
+                            <h4>Overview</h4>
+                        </div>
+                        <div class="subopatext actived" onclick="showtab(1)">
+                            <h4>About</h4>
+                        </div>
+                    </div>
+                    <div class="rate">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                            <label for="star5" title="text">5 stars</label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                            <label for="star4" title="text">4 stars</label>
+                            <input type="radio" id="star3" name="rate" value="3" />
+                            <label for="star3" title="text">3 stars</label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                            <label for="star2" title="text">2 stars</label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                            <label for="star1" title="text">1 star</label>
+                    </div>
+                </div>
+            </div>
+            <div class="subchild">
+                <div class="content">
+                    <div class="subcontent">
+                        <div class="inside"><p>01</p></div>
+                         <div class="inside">
+                            <a class="speciala" href="https://www.gamespot.com/videos/pokemon-lets-go-vs-traditional-pokemon-games-versu/2300-6447409/" target="_blank"><i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                         <div class="inside"></div>
+                         <div class="inside"><p>Pokemon Let's Go Vs. Traditional Pokemon Games</p></div>
+                         <div class="inside">
+                            <a href="demo04.html"><i class="fas fa-bookmark"></i></a>
+                         </div>  
+                         <div class="inside">
+                            <p>Ken Sugimori</p>
+                         </div>
+                         <div class="inside d_icon" style="margin-left: auto">
+                            <i class="fas fa-thumbs-up" style="font-size: 25px"></i>
+                            <p>131</p>
+                         </div>
+                    </div>
+                    <div class="subcontent">
+                        <div class="inside"><p>02</p></div>
+                        <div class="inside">
+                            <a class="speciala" href="https://pokemongohub.net/post/ar/ar-photo-showcase-party/" target="_blank"><i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div class="inside"></div>
+                        <div class="inside"><p>Pokémon GO Monthly AR Photo Showcase: Party!</p></div>
+                        <div class="inside">
+                            <a href="demo04.html"><i class="fas fa-bookmark"></i></a>
+                        </div> 
+                        <div class="inside">
+                            <p>Ken Sugimori</p>
+                        </div>
+                        <div class="inside d_icon" style="margin-left: auto">
+                            <i class="fas fa-thumbs-up" style="font-size: 25px"></i>
+                            <p>100</p>
+                        </div>
+                    </div>
+                    <div class="subcontent">
+                        <div class="inside"><p>03</p></div>
+                        <div class="inside">
+                            <a class="speciala" href="https://pokemongolive.com/post/shinymeltanreturns" target="_blank"><i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div class="inside"></div>
+                        <div class="inside"><p>Shiny Meltan returns for a limited time! Catch it! </p></div>
+                        <div class="inside">
+                            <a href="demo04.html"><i class="fas fa-bookmark"></i></a>
+                        </div>
+                        <div class="inside">
+                                <p>Ken Sugimori</p>
+                        </div>
+                        <div class="inside d_icon" style="margin-left: auto">   
+                            <i class="fas fa-thumbs-up" style="font-size: 25px"></i>
+                            <p>728</p>           
+                        </div>
+                    </div>
+                    <div class="subcontent">
+                        <div class="inside"><p>04</p></div>
+                        <div class="inside">
+                            <a class="speciala" href="https://pokemongolive.com/en/post/weekraid2019-lati0s/" target="_blank"><i class="fas fa-arrow-circle-right"></i></a>
+                        </div>
+                        <div class="inside"></div>
+                        <div class="inside"><p>Challenge Latios during this Special Raid Week!</p></div>
+                        <div class="inside">
+                            <a href="demo04.html"><i class="fas fa-bookmark"></i></a>
+                        </div>
+                        <div class="inside">
+                                <p>Ken Sugimori</p>
+                        </div>
+                        <div class="inside d_icon" style="margin-left: auto">
+                            <i class="fas fa-thumbs-up" style="font-size: 25px"></i>
+                            <p>260</p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="content secondbox">
+                    <div class="information">
+                        <div class="card boxxy">
+                            <div class="subcard">
+                                <h2>EVENTS</h2>
+                            </div>
+                            <div class="subcard">
+                                <h3>Upcoming Events</h3>
+                                <div class="list">
+                                    <div class="child-list">
+                                        <i class="far fa-square"></i>
+                                        <p>Comunnity Day</p>
+                                        <p>20/5/2019</p>
+                                    </div>
+                                    <div class="child-list">
+                                        <i class="far fa-square"></i>
+                                        <p>Nest Migration</p>
+                                        <p>20/5/2019</p>
+                                    </div>
+                                    <div class="child-list">
+                                        <i class="far fa-square"></i>
+                                        <p>Time to fire out!</p>
+                                        <p>20/5/2019</p>
+                                    </div>
+                                    <div class="child-list">
+                                        <i class="far fa-square"></i>
+                                        <p>Time to bug out!</p>
+                                        <p>20/5/2019</p>
+                                    </div>
+                                    <div class="child-list">
+                                        <i class="far fa-square"></i>
+                                        <p>Comunnity Day</p>
+                                        <p>20/5/2019</p>
+                                    </div>
+                                    <div class="child-list">
+                                        <i class="far fa-square"></i>
+                                        <p>Comunnity Day</p>
+                                        <p>20/5/2019</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card boxxy">
+                            <div class="subcard">
+                                <h2>WHAT'S NEWS</h2>
+                            </div>
+                            <div class="subcard" id="whatnews">
+                                <h2>NO POKEMON GO'S NEWS FOR TODAY</h2>
+                            </div>
+                        </div>
+                        <div class="card boxxy">
+                            <div class="subcard">
+                                <h2>POKEMONS</h2>
+                            </div>
+                            <div class="subcard checkbox">
+                                <div class="list">
+                                    <div class="child-list third">
+                                        <label class="container">
+                                            <p>#001 Bulbasaur</p>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="pic">
+                                            <img src="../WallaperforProject1Demo01/bulbasaur.png" alt="Bulbasaur">
+                                        </div>
+                                    </div>
+                                    <div class="child-list third">
+                                        <label class="container">
+                                            <p>#002 Ivysaur</p>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="pic">
+                                            <img src="../WallaperforProject1Demo01/ivysaur.png" alt="Ivysaur">
+                                        </div>
+                                    </div>
+                                    <div class="child-list third">
+                                        <label class="container">
+                                            <p>#003 Venusaur</p>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="pic">
+                                            <img src="../WallaperforProject1Demo01/venusaur.png" alt="Venusaur">
+                                        </div>
+                                    </div>
+                                    <div class="child-list third" style="background-color: lightsalmon">
+                                        <label class="container">
+                                            <p>#004 Charmander</p>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="pic">
+                                            <img src="../WallaperforProject1Demo01/charmander.png" alt="Charmander">
+                                        </div>
+                                    </div>
+                                    <div class="child-list third" style="background-color: lightsalmon">
+                                        <label class="container">
+                                            <p>#005 Charmeleon</p>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="pic">
+                                            <img src="../WallaperforProject1Demo01/Charmeleon.png" alt="Charmeleon">
+                                        </div>
+                                    </div>
+                                    <div class="child-list third" style="background-color: lightsalmon">
+                                        <label class="container">
+                                            <p>#006 Charizard</p>
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <div class="pic">
+                                            <img src="../WallaperforProject1Demo01/charizard.png" alt="Charizard">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="animation">
+                    <a href="#">DOWNLOAD</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function showtab(index)
+        {   
+            var tabtitle = document.getElementsByClassName("subopatext");
+            console.log(tabtitle);
+            var tabcontent = document.getElementsByClassName("content");
+            console.log(tabcontent);
+            for(i=0; i<tabcontent.length;i++)
+            {
+                tabcontent[i].style.display = "none";
+                console.log(tabcontent[i]);
+            }
+            for(i=0; i<tabtitle.length;i++)
+            {
+                tabtitle[i].classList.remove="actived";
+            }
+            tabcontent[index].style.display = "block";
+            tabtitle[index].classList.add="actived";
+        }
+    </script>
+    <script src="../javascript/slideshow.js"></script>
+    <script>
+                    var close = document.getElementById("closebtn");
+                    var hamburger = document.getElementById("hbg");
+                    function showmenu()
+                    {
+                        var menutitle = document.getElementsByClassName("menu-title");
+                        document.getElementById("hello").style.minWidth="250px";
+                        for(i=0; i<menutitle.length;i++)
+                        {
+                            menutitle[i].style.display = "block";
+                        }
+                        var closed = document.getElementById("closebtn").style.display ="block";
+                    }
+                    hamburger.onclick = showmenu;
+                    close.onclick=function()
+                    {
+                        /*console.log(close);*/
+                        var menutitle = document.getElementsByClassName("menu-title");
+                        document.getElementById("hello").style.minWidth="90px";
+                        for(i=0; i<menutitle.length;i++)
+                        {
+                            menutitle[i].style.display = "none";
+                        }
+                        var closing = document.getElementById("closebtn").style.display="none";
+                    }
+    </script>
+</body>
+</html>

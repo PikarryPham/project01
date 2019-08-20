@@ -1,0 +1,624 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    transition: all 0.6s;
+    font-family: 'Lato', sans-serif;
+}
+html,body{
+    background: url("../WallaperforProject1Demo01/background.png");
+    background-position: top;
+    background-attachment: fixed;
+    cursor: default;
+    background-size: cover;
+    scroll-behavior: smooth;
+    /*position: relative;*/
+}
+.opacity_layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: .8;
+    z-index: 30;
+    top: 0;
+}
+/*--------------LOADER-ANDROID-------------------*/
+/*---------------HAMBURGER MENU--------------*/
+.contenting{
+    display:flex;
+  }
+  .side{
+    background:#151014;
+    width: 90px;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: sticky;
+  }
+  .menu-item{
+      margin-top: 10px;
+    background:#151014;
+    /*border-bottom:1px solid #d4d4d4;*/
+    display:flex;
+    transition: all 0.5s;
+  }
+  .menu-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+  }
+  .menu-title>a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      padding-left: 10px;
+      white-space: nowrap;
+  }
+  .menu-title>p{
+      font-size: 20px;
+      color :white;
+      display: inline-block;
+      height: 100px;
+      line-height: 4;
+      padding: 10px 30px;
+      margin-left: 25px;
+      font-weight: bold;
+      cursor: default;
+      transition: all 0.5s;
+  }
+  p#p-menutitle{
+      padding: 10px;
+      padding-right: 0px;
+      margin-left: 20px;
+      word-break: keep-all;
+  }
+  a:hover{
+      color: #D11454;
+  }
+.menu-item{
+    background-color: #151014;
+    display: flex;
+    align-items: center; 
+}
+.special {
+    margin: 0px 36px;
+    height: 80px;
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+  }
+.special>li>a{
+    color: white;
+    font-size: 28px;
+    padding: 0px 10px;
+    transition: all 0.4s ease-in-out;
+  }
+.special>li>a:hover{
+      color: rgb(235, 59, 117,0.5);
+      transition: all 0.5s ease-in-out;
+  }
+.icon{
+    padding-left: 12px;
+    height:70px;
+    min-width:70px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+.icon>i{
+      font-size: 25px;
+      color: #D11454;
+}
+.closebtn{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: none;
+}
+.arrows{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+.arrows>img{
+    width: 100px;
+    height: 100px;
+}
+/*-------------------SLIDESHOW CONTENT THỨ NHẤT-----------------------*/
+.main{
+    height:922px;
+    /*background:#2f3036;*/
+    width:100%;
+}
+.subchild:nth-child(1){
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+.slideshow{
+    position: relative;
+    overflow: hidden;
+}
+.slideshow>img.slides{
+    width: 100%;
+    max-height: 400px;
+    animation: fade 2s;
+}
+.dot{
+    cursor:pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #ff8080;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    opacity: .7;
+}
+.dotted{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+}
+/*khi duoc hover, active doi mau nen*/
+.active,.dot:hover{
+    background-color: #D11454;
+}
+/*@keyframes fade{
+    from{
+        opacity: .4;
+    }
+    to{
+        opacity: 1;
+    }
+}*/
+/*---------------------CONTENT THỨ 2 Ở CUỐI BÊN PHẢI------------*/
+.subchild:nth-child(2)
+{
+    width: 100%;
+    height: 422px;
+}
+/*--------------------ANIMATION CHO NÚT DOWNLOAD--------------*/
+.animation{
+    background-color: #dadada;
+    max-width: 15%;
+    padding: 0px 30px;
+    margin: 0px auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(82, 79, 79, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.animation>a{
+    text-decoration: none;
+    height: 30px;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.animation:hover {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation-name: example;
+    animation-duration: 0.25s;
+    border-left: 8px solid rgb(214, 13, 47);
+    border-right: 8px solid rgb(214, 13, 47);
+    box-shadow: 0 14px 28px rgba(168, 14, 14, 0.25), 0 10px 10px rgba(148, 5, 5, 0.503);
+}
+  @keyframes example {
+    0%   {border-left: 2px solid #ffffff;}
+    25%  {border-left: 3px solid #ffe6e6;}
+    50%  {border-left: 4px solid #ff8080;}
+    100% {border-left: 5px solid rgb(214, 13, 47);}
+}
+/*------------------- CONTENT FOR SUBCHILD THỨ NHẤT------------------------*/
+/*-------------------OPACITY -------------------*/
+.opacity{
+    background-color: rgb(68, 30, 30);
+    position: absolute;
+    opacity: 0.8;
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.opacity>.opatext{
+    display: flex;
+    color: white;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+}
+.subopatext{
+    width: 100px;
+    margin-left: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.opacity>.opatext>.subopatext:hover>h4{
+    border-bottom: 2px solid rgb(250, 241, 238);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.active:hover{
+    background-color: rgb(43, 22, 22);
+}
+/*-----------------------BUTTON TRONG CONTENT THU NHAT ----------------------*/
+.subbutton{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   position: relative;
+    bottom: 30%;
+}
+.button1>button{
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    background-color: #e90038;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.button1>button>a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.button1>button:hover{
+    border-bottom: 2px solid whitesmoke;
+}
+.button2{
+    width: 30px;
+    height: 35px;
+    background-color: #242020;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button2:hover>i{
+    color: #d90036;
+    transition: all 0.5s;
+}
+.button2:hover{
+    border-bottom: 2px solid whitesmoke;
+}
+/*-------------------AVATAR TRONG CONTENT THU NHAT----------------*/
+.picture{
+    position: relative;
+    bottom: 65%;
+    width: 50%;
+    height: 150px;
+    /*background-color: black;*/
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.avatar{
+    /*background-color: orange;*/
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image{
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    background: url("../logo/pkmgo.jpg");
+    background-position: top center;
+    background-size: cover;
+}
+.picture-text{
+    /*background-color: red;*/
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.subpicture-text{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: whitesmoke;
+}
+.subpicture-text:nth-child(1)
+{
+    display: flex;
+    justify-content: space-between;
+}
+.picture-child
+{
+    /*background-color: lightskyblue;*/
+    width: 23%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.picture-child>p
+{
+    font-size: 20px;
+}
+.sub-picturechild{
+    margin-top: 15px;
+    width: 35%;
+    height: inherit;
+    /*background: lightseagreen;*/
+}
+/*-----------------RATING 5 SAO-----------------*/
+.rate{
+    margin-left: auto;
+    padding-right: 15px;
+}
+.rate:not(:checked) > input {
+    content: '\f005';
+    font-family: fontAwesome;
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size: 30px;
+    color:#dadada;
+}
+.rate:not(:checked) > label:before {
+    content: '\f005';
+    font-family: fontAwesome;
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+/*-------------------CONTENT FOR SUBCHILD THỨ HAI -------------------------*/
+.subcontent{
+    background-color: #28292c;
+    padding: 10px;
+    margin: 20px 10px;
+    color: rgb(189, 180, 180);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+.content:nth-child(2)
+{
+    display: none;
+}
+.content>.subcontent>.inside:nth-child(3){
+    background-image:url("../WallaperforProject1Demo01/dragalialost.jpg");
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+.inside{
+    padding: 0px 30px;
+    font-weight: bold;
+}
+.inside.d_icon
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inside.d_icon>p{
+    padding-left: 15px;
+    color: #d90036;
+}
+.content>.subcontent>.inside:nth-child(5){
+    font-size: 20px;
+}
+.content>.subcontent>.inside:nth-child(5)>a{
+    color:rgb(189, 180, 180);
+}
+.content>.subcontent>.inside:nth-child(5):hover>a{
+    color: #d90036;
+}
+.content>.subcontent>.inside:nth-child(5)>a:visited{
+    color: #191a1c;
+}
+.speciala{
+    color: white;
+    opacity: 0.8;
+}
+.speciala:active{
+    color: #e90038;
+}
+/*----------------------CONTENT THU 2 TRONG SUBCHILD THU 2 {CARD}---------------*/
+.information{
+    width: 80%;
+    height: 380px;
+    display: inline-flex;
+    margin: 25px 30px 20px 150px;
+}
+.content.secondbox{
+    padding-left: 115px;
+}
+.card{
+    display: flex;
+    height: 380px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 4px -4px 10px -2px rgba(0,0,0,0.77), -4px 4px 10px -2px rgba(0,0,0,0.77);
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    background: #dadada;
+    display: grid;
+    grid-template-rows: 0.2fr auto;
+}
+.card:nth-child(2)
+{
+    overflow: hidden;
+}
+.card:not(:first-child)
+{
+    margin-left: -40px;
+}
+/*GIẢI THÍCH: Khi hover vào thẻ bất kì, các thẻ khác có selector .bossy sẽ dịch chuyển sang trái 50px*/
+/*Khi hover thẻ .card --> ảnh hưởng đến thẻ .boxxy còn lại*/
+.card:hover~.boxxy{
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}
+/*Đồng thời, thẻ được chọn sẽ dịch lên trên 20px*/
+.card:hover{
+    transform: translateY(-20px);
+    overflow: hidden;
+    transition: 0.4s ease-out;
+}
+/*Ở đây để tiện hover cùng 1 thẻ áp dụng 2 cái hiệu ứng, dùng selector .card và selector .boxxy cho một thẻ*/
+.subcard:nth-child(1){
+    background-color: #252527;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subcard:nth-child(1)>h2{
+    color: whitesmoke;
+    font-size: 30px;
+}
+.subcard:nth-child(2)
+{
+    text-align: center;
+}
+
+.child-list{
+    background-color: #D11454;
+    width: 100%;
+    height: 40px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: wheat;
+}
+.child-list>p{
+    font-weight: bold;
+}
+.child-list:nth-child(4),.child-list:nth-child(5),.child-list:nth-child(6)
+{
+    background-color: rgb(68, 189, 52);
+}
+.child-list.third{
+    background-color: rgb(68, 189, 52);
+    width: 100%;
+    height: 45px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: wheat;
+}
+/*--------------------CUSTOM CHECHBOX-------------------------*/
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.container>p{
+    font-size: 20px;
+}
+/*Giấu input của container đi khỏi màn hình trình duyệt*/
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+/*Cái dấu tick*/
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+} 
+/*Khi checkbox được check, thêm màu đen vào */
+.container input:checked ~ .checkmark {
+    background-color: #242020;
+}
+/*Tạo cái checkmark (sẽ ẩn đi khi chưa check)*/
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+} 
+/* Show cái checkmark khi được check */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid whitesmoke;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.pic{
+    width: 40px;
+    height: 40px;
+    /*background-color: blue;*/
+}
+.pic>img{
+    max-width: 40px;
+    max-height: 40px;
+}
+#whatnews{
+    background:url("../WallaperforProject1Demo01/chikorita.jpg");
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#whatnews>h2{
+    color: white;
+    text-shadow: 2px 2px 5px #D11454;
+    display: none;
+}
+#whatnews:hover>h2{
+    display: block;
+    transition: all 0.5s ease-out;
+}

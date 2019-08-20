@@ -1,0 +1,120 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    font-family: 'Lato', sans-serif;
+}
+/*---------------HAMBURGER MENU--------------*/
+  /*.toggle{
+      background-color: #151014;
+  }
+  .toggle>img{
+      width: 100px;
+      height: 100px;
+      margin: 5px 10px;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+  }*/
+  .contenting{
+    display:flex;
+  }
+  .side{
+    background:#151014;
+    /*width: 0%;
+    overflow: hidden;*/
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .menu-item{
+    background:#151014;
+    /*border-bottom:1px solid #d4d4d4;*/
+    display:flex;
+  }
+  .menu-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .menu-title>a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      padding-left: 10px;
+  }
+  .menu-title>p{
+      font-size: 20px;
+      color :white;
+      display: inline-block;
+      height: 100px;
+      line-height: 4;
+      padding: 10px 30px;
+      margin-left: 25px;
+      font-weight: bold;
+      cursor: default;
+  }
+  p#p-menutitle{
+      padding: 10px;
+      padding-right: 0px;
+      margin-left: 20px;
+      word-break: keep-all;
+  }
+  a:hover{
+      color: #D11454;
+  }
+  .menu-item{
+      background-color: #151014;
+      display: flex;
+      align-items: center; 
+  }
+  .special {
+      margin: 0px 36px;
+      height: 80px;
+      list-style-type: none;
+      padding: 0px;
+      display: flex;
+      align-items: center;
+  }
+  .special>li>a{
+      color: white;
+      font-size: 28px;
+      padding: 0px 10px;
+      transition: all 0.4s ease-in-out;
+  }
+  .special>li>a:hover{
+      color: rgb(235, 59, 117,0.5);
+      transition: all 0.5s ease-in-out;
+  }
+  .icon{
+    height:70px;
+    width:70px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .icon>i{
+      font-size: 25px;
+      color: #D11454;
+}
+ /* .toggle:hover~.side>.menu-item>.menu-title{
+    max-width:0px;
+    overflow:hidden;
+    max-height:0px;
+    word-break: keep-all;
+}
+  .toggle:hover~.side{
+    min-width:0;
+}*/
+.main{
+    background-color: lightseagreen;
+    width: 100%;
+    height: 800px;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/AHIHI.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../logo/logo.png">
+    <title>AHIHI DEMO01</title>
+</head>
+<body>
+    <section class="contenting">
+        <div class="side" id="hello">
+        <div class="closebtn" id="closebtn">
+            <span><i class="fas fa-times"></i></span>
+        </div>
+        <div class="menu-item">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <div class="menu-title">
+                <a href="../html/demo01.html" target="_blank">Home</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-scroll"></i></span>
+            <div class="menu-title">
+                <a href="../html/demo02.html" target="_blank">Recommend</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-calendar-minus"></i></span>
+            <div class="menu-title">
+                <a href="../html/demo03.html" target="_blank">New Release</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-level-up-alt"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Forums</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-gamepad"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Video Games</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-comment-dots"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Rate Us</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-heart"></i></span>
+            <div class="menu-title">
+                <a href="../html/FIXdemo04.html" target="_blank">Favourites</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-history"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">History</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-title" >
+                <p id="p-menutitle">You can visit me on</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-title">
+                <ul class="special">
+                    <li><a href="#"><i class="fab fa-reddit-square" target="_blank"></i></a></li>
+                    <li><a href="https://www.facebook.com/hocvienkmin/"  target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.kmin.edu.vn/"><i class="fas fa-hashtag" target="_blank"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="main">
+            <div class="search">
+                <div class="arrows">
+                    <img id="hbg" src="../logo/logo.png" alt="logokmin">
+                    
+                </div>
+                <script>
+                    var hamburger = document.getElementById("hbg");
+                    function showmenu()
+                    {
+                        var menutitle = document.getElementsByClassName("menu-title");
+                        document.getElementById("hello").style.minWidth="250px";
+                        for(i=0; i<menutitle.length;i++)
+                        {
+                            menutitle[i].style.display = "flex";
+                        }
+                    }
+                    hamburger.onclick = showmenu;
+                    var close = document.getElementById("closebtn");
+                    close.onclick=function()
+                    {
+                        /*console.log(close);*/
+                        var menutitle = document.getElementsByClassName("menu-title");
+                        document.getElementById("hello").style.minWidth="90px";
+                        for(i=0; i<menutitle.length;i++)
+                        {
+                            menutitle[i].style.display = "none";
+                        }
+                    }
+                </script>
+                <div class="input">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="avatar" style="position: relative;margin: 0px 20px;">
+                    <i class="fas fa-bell"></i>
+                    <div class="circle"><span>5</span></div>
+                </div>
+                <div class="icon">
+                    <img src="../logo/avatarmon.jpg" alt="">
+                </div>
+            </div>
+            <div class="content">
+                <div class="buttons_1">
+                    <button class="pulse">GENRE GAME</button>
+                </div>
+                <div class="headtext">
+                    <h1>Gaming Playlist Of The Year</h1>
+                </div>
+                <div class="subtext">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure iste obcaecati velit quo asperiores tenetur accusantium sequi aliquam eius nesciunt veritatis non ea aliquid incidunt voluptate beatae, reprehenderit sunt a!</p>
+                </div>
+                <div class="button1">
+                    <a href="https://www.youtube.com/watch?v=EXO7RuEs80U" target="_blank">
+                        <input type="button" value="PLAY" />
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="../logo/game console.png" alt="Game-console">
+                </div>
+            </div>
+            <div class="slider-holder">
+                <span id="slider-image-1"></span>
+                <span id="slider-image-2"></span>
+                <span id="slider-image-3"></span>
+            <div class="image-holder">
+                <div class="slider-image">
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="one"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Game of Thrones</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="two"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Kirby</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="three"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Pokemon ORAS </h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image">
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="four"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Little Nightmare</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="five"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Doraemon</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="six"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Pokemon BW2</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image">
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="seven"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Dragon's Dogma</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="eight"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Dragalia Lost</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature">
+                            <p>FEATURE</p>
+                        </div>
+                        <div class="picture" id="nine"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Pokemon Sun</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-holder">
+                <a href="#slider-image-1" class="slider-change"></a>
+                <a href="#slider-image-2" class="slider-change"></a>
+                <a href="#slider-image-3" class="slider-change"></a>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+</html>

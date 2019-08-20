@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/AHIHI.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="../logo/logo.png">
+    <title>Home</title>
+</head>
+<body>
+    <div class="form" id="form">
+        <div class="sub-form">
+            <div class="child-form">
+                <div class="child-card" id="first">
+                    <div class="front"></div>
+                    <div class="back"></div>
+                </div>
+            </div>
+            <div class="child-form">
+               <h1 style="padding: 5px">WELCOME BACK!</h1>
+               <p>To keep connected with us please login with your personal info</p>
+               <div class="social-media">
+                   <a href="#">
+                        <i class="fab fa-twitter"></i>
+                   </a>
+                   <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                   </a>
+                   <a href="#">
+                        <i class="fab fa-google"></i>
+                   </a>
+               </div>
+               <form style="margin-top: 15px;">
+                   <input id="err-email" type="text" placeholder="Username">
+                   <input id = "err-pss" type="password" placeholder="Password">
+                   <input id="signupbtn" type="button" value="LOG IN">
+               </form>
+            </div>
+        </div>
+    </div>
+    <section class="contenting"> 
+        <div class="side" id="hello">
+        <div class="closebtn" id="closebtn">
+            <span><i class="fas fa-times"></i></span>
+        </div>
+        <div class="menu-item">
+            <div class="icon"><i class="fas fa-home"></i></div>
+            <div class="menu-title">
+                <a href="../html/demo01.html" target="_blank">Home</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-scroll"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Recommend</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-calendar-minus"></i></span>
+            <div class="menu-title">
+                <a href="../html/demo03.html" target="_blank">New Release</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-level-up-alt"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Forums</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-gamepad"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Video Games</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-comment-dots"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">Rate Us</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-heart"></i></span>
+            <div class="menu-title">
+                <a href="../html/FIXdemo04.html" target="_blank">Favourites</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <span class="icon"><i class="fas fa-history"></i></span>
+            <div class="menu-title">
+                <a href="#" target="_blank">History</a>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-title" >
+                <p id="p-menutitle">You can visit me on</p>
+            </div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-title">
+                <ul class="special">
+                    <li><a href="#"><i class="fab fa-reddit-square" target="_blank"></i></a></li>
+                    <li><a href="https://www.facebook.com/hocvienkmin/"  target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.kmin.edu.vn/"><i class="fas fa-hashtag" target="_blank"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class="main">
+            <div class="search">
+                <div class="arrows">
+                    <img id="hbg" src="../logo/logo.png" alt="logokmin">  
+                </div>
+                <script>
+                    var close = document.getElementById("closebtn");
+                    var hamburger = document.getElementById("hbg");
+                    function showmenu()
+                    {
+                        var menutitle = document.getElementsByClassName("menu-title");
+                        document.getElementById("hello").style.minWidth="250px";
+                        for(i=0; i<menutitle.length;i++)
+                        {
+                            menutitle[i].style.display = "block";
+                        }
+                        var closed = document.getElementById("closebtn").style.display ="block";
+                    }
+                    hamburger.onclick = showmenu;
+                    close.onclick=function()
+                    {
+                        var menutitle = document.getElementsByClassName("menu-title");
+                        document.getElementById("hello").style.minWidth="90px";
+                        for(i=0; i<menutitle.length;i++)
+                        {
+                            menutitle[i].style.display = "none";
+                        }
+                        var closing = document.getElementById("closebtn").style.display="none";
+                    }
+                </script>
+                <div class="input">
+                    <input type="text" placeholder="Search...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="avatar">
+                    <i class="fas fa-bell" id="bell"></i>
+                    <div class="circle"><span>5</span></div>
+                    <div class="alert warning">
+                        <div class="child-alert">
+                            <div class="childimage">
+                                <img src="../WallaperforProject1Demo01/bell.gif" alt="bell">
+                            </div>
+                        </div>
+                        <div class="child-alert">
+                            <h4 style="color: #DB3737">You got notifications!</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="icon" id="icons">
+                    <div class="notification warning" id="notification">
+                        <div class="sub-noti">
+                            <div class="sub-subnoti"></div>
+                            <div class="sub-subnoti">
+                                <h4>Pikarry Pham</h4>
+                            </div>
+                        </div>
+                        <div class="sub-noti">
+                            <ul>
+                                <li><i class="fas fa-user-circle"></i>My Account</li>
+                                <li><i class="fas fa-cog"></i>Setting</li>
+                                <li><i class="fas fa-question"></i>Help</li>
+                                <li><i class="fas fa-sign-out-alt"></i>Log Out</li>
+                                <li><i class="fas fa-unlock-alt"></i>Privacy Policy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <img class="avatarmon" src="../logo/avatarmon.jpg" alt="avatarmon" id="avatarmon">
+                </div>
+                <script src="../javascript/activate.js">
+                </script>
+            </div>
+            <div class="search lazysea" id="lazysea">
+                <div class="arrows"></div>
+                <div class="input"></div>
+                <div class="avatar">
+                    <div class="alert"></div>
+                </div>
+                <div class="icons"></div>
+            </div>
+            <div class="content">
+                <div class="buttons_1">
+                    <button class="pulse">GENRE GAME</button>
+                </div>
+                <div class="headtext">
+                    <h1>Gaming Playlist Of The Year</h1>
+                </div>
+                <div class="subtext">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure iste obcaecati velit quo asperiores tenetur accusantium sequi aliquam eius nesciunt veritatis non ea aliquid incidunt voluptate beatae, reprehenderit sunt a!</p>
+                </div>
+                <div class="button1">
+                    <a href="https://www.youtube.com/watch?v=EXO7RuEs80U" target="_blank">
+                        <input type="button" value="PLAY" />
+                    </a>
+                </div>
+                <div class="image">
+                    <img src="../logo/game console.png" alt="Game-console">
+                </div>
+            </div>
+            <div class="content lazyload"   id="lazyload">
+                <div class="buttons_1">
+                    <button></button>
+                </div>
+                <div class="headtext"></div>
+                <div class="subtext"></div>
+                <div class="button1">
+                    <button></button>
+                </div>
+            </div>
+            <div class="slider-holder">
+                <span id="slider-image-1"></span>
+                <span id="slider-image-2"></span>
+                <span id="slider-image-3"></span>
+            <div class="image-holder">
+                <div class="slider-image">
+                    <div class="contents">
+                        <div class="feature" style="background-color: #FD6A02">
+                            <p>Adventure</p>
+                        </div>
+                        <div class="picture" id="one"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Game of Thrones</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature"  style="background-color: #FD6A02">
+                            <p>Adventure</p>
+                        </div>
+                        <div class="picture" id="two"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Kirby</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature"  style="background-color: #FD6A02">
+                            <p>Adventure</p>
+                        </div>
+                        <div class="picture" id="three"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Pokemon ORAS </h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image">
+                    <div class="contents">
+                        <div class="feature" style="background-color:purple">
+                            <p>Horror</p>
+                        </div>
+                        <div class="picture" id="four"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Little Nightmare</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature" style="background-color:#FD6A02">
+                            <p>Adventure</p>
+                        </div>
+                        <div class="picture" id="five"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Doraemon</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature" style="background-color:#FD6A02">
+                            <p>Adventure</p>
+                        </div>
+                        <div class="picture" id="six"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Pokemon BW2</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-image">
+                    <div class="contents">
+                        <div class="feature" style="background-color:#CA3433">
+                            <p>Action</p>
+                        </div>
+                        <div class="picture" id="seven"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Dragon's Dogma</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature" style="background-color:#FD6A02">
+                            <p>Adventure</p>
+                        </div>
+                        <div class="picture" id="eight"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Dragalia Lost</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="contents">
+                        <div class="feature" style="background-color:#FD6A02">
+                            <p>Adventure</p>
+                        </div>
+                        <div class="picture" id="nine"></div>
+                        <div class="description" style="padding-top: 5px; opacity: .7; cursor: default;">
+                            <h4 style="color: whitesmoke">Pokemon Sun</h4>
+                            <p style="color: whitesmoke">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-holder">
+                <a href="#slider-image-1" class="slider-change"></a>
+                <a href="#slider-image-2" class="slider-change"></a>
+                <a href="#slider-image-3" class="slider-change"></a>
+            </div>
+            </div>
+            <div class="lazy" id="lazy">
+                <div class="slider-image lazyload">
+                    <div class="contents"></div>
+                    <div class="contents"></div>
+                    <div class="contents"></div>
+                </div>
+            </div>
+            <div class="news">
+                <div class="header">
+                    <button class="closet">TRAILERS</button>
+                </div>
+                <div class="psu-news">
+                    <div class="sub-news">
+                        <div class="child-news">
+                            <div class="pic">
+                               <img src="https://i.imgur.com/vxJW7vY.gif" alt="videoultrapokemon">
+                            </div>
+                            <div class="video">
+                                <img src="../WallaperforProject1Demo01/pokemonmoon.jpg" alt="pokemonmoon">
+                            </div>
+                        </div>
+                        <div class="child-news">
+                            <div class="thongtin" style="display:flex; justify-content: center; align-items: center;">
+                                <h3>POKEMON ULTRA MOON</h3>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: space-around; align-items: center">
+                                <ul>
+                                    <li>Platform:</li>
+                                    <li>Release Day:</li>
+                                    <li>Language:</li>
+                                    <li style="white-space: nowrap">Genre Game:</li>
+                                    <li>Followers:</li>
+                                </ul>
+                                <ul style="color: rgb(235, 101, 121)">
+                                    <li>3DS</li>
+                                    <li>10/11/2017</li>
+                                    <li>English/Japanese</li>
+                                    <li>Adventure</li>
+                                    <li id="text"></li>
+                                </ul>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: center; align-items: center;">
+                                <div class="btn slidein pause" id="slidein" onclick="playvideo(0)">
+                                    <div>Click Me</div>
+                                    <div></div>
+                                    <div>PLAY VIDEO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-news">
+                        <div class="child-news">
+                            <div class="pic">
+                                <img src="https://i.imgur.com/vxJW7vY.gif" alt="videothewitness">
+                            </div>
+                            <div class="video">
+                                <img src="../WallaperforProject1Demo01/thewitness.jpg" alt="thewitness">
+                            </div>
+                        </div>
+                        <div class="child-news">
+                            <div class="thongtin" style="display:flex; justify-content: center; align-items: center">
+                                <h3>THE WITNESS</h3>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: space-around; align-items: center">
+                                <ul>
+                                    <li>Platform:</li>
+                                    <li>Release Day:</li>
+                                    <li>Language:</li>
+                                    <li>Genre Game:</li>
+                                    <li>Followers:</li>
+                                </ul>
+                                <ul style="color: rgb(235, 101, 121)">
+                                    <li>PS4</li>
+                                    <li>26/01/2016</li>
+                                    <li>English/Japanese</li>
+                                    <li>Puzzle</li>
+                                    <li id="text1"></li>
+                                </ul>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: center;align-items: center;">
+                                <div class="btn slidein" onclick = "playvideo(1)">
+                                    <div>Click Me</div>
+                                    <div></div>
+                                    <div>PLAY VIDEO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-news">
+                        <div class="child-news">
+                            <div class="pic">
+                                <img src="https://i.imgur.com/vxJW7vY.gif" alt="videotheroom">
+                            </div>
+                            <div class="video">
+                                <img src="../WallaperforProject1Demo01/theroomthere.jpg" alt="theroomthere">
+                            </div>
+                        </div>
+                        <div class="child-news">
+                            <div class="thongtin" style="display:flex; justify-content: center; align-items: center">
+                                <h3>THE ROOM</h3>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: space-around; align-items: center">
+                                <ul>
+                                    <li>Platform:</li>
+                                    <li>Release Day:</li>
+                                    <li>Language:</li>
+                                    <li>Genre Game:</li>
+                                    <li>Followers:</li>
+                                </ul>
+                                <ul style="color:rgb(235, 101, 121)">
+                                    <li>Android/iOS</li>
+                                    <li>4/11/2015</li>
+                                    <li>English/Japanese</li>
+                                    <li>Puzzle</li>
+                                    <li id="text2"></li>
+                                </ul>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: center; align-items: center;">
+                                <div class="btn slidein" onclick="playvideo(2)">
+                                    <div>Click Me</div>
+                                    <div></div>
+                                    <div>PLAY VIDEO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-news">
+                        <div class="child-news">
+                            <div class="pic">
+                                <img src="https://i.imgur.com/vxJW7vY.gif" alt="videospiderman">
+                            </div>
+                            <div class="video">
+                                <img src="../WallaperforProject1Demo01/spiderman4k.jpg" alt="spiderman4k">
+                            </div>
+                        </div>
+                        <div class="child-news">
+                            <div class="thongtin" style="display:flex; justify-content: center; align-items: center">
+                                <h3>SPIDER MAN</h3>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: space-around; align-items: center">
+                                <ul>
+                                    <li>Platform:</li>
+                                    <li>Release Day:</li>
+                                    <li>Language:</li>
+                                    <li style="white-space: nowrap">Genre Game:</li>
+                                    <li>Followers:</li>
+                                </ul>
+                                <ul style="color: rgb(235, 101, 121)">
+                                    <li>PS4</li>
+                                    <li>5/10/2011</li>
+                                    <li>English/France</li>
+                                    <li>Action/Adventure</li>
+                                    <li id="text3"></li>
+                                </ul>
+                            </div>
+                            <div class="thongtin" style="display:flex; justify-content: center; align-items: center;">
+                                <div class="btn slidein" onclick="playvideo(3)">
+                                    <div>Click Me</div>
+                                    <div></div>
+                                    <div>PLAY VIDEO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var index = 0;
+                    var play = document.getElementsByClassName("btn slidein");
+                    console.log(play);
+                    function playvideo(videoindex)
+                    {
+                        var picture = document.getElementsByClassName("pic");
+                        var video = document.getElementsByClassName("video");
+                        for(i=0;i<picture.length;i++)
+                        {
+                            picture[i].style.display = "none";
+                        }
+                        for(i=0; i<video.length;i++)
+                        {
+                            video[i].style.display = "block";
+                        }
+                        picture[videoindex].style.display = "block";
+                        video[videoindex].style.display = "none";
+                        index++;
+                    }
+                </script>
+            </div>
+            <div class="lazynews">
+                <div class="header">
+                    <button class="closet lazybutton"></button>
+                </div>
+                <div class="psu-news">
+                   <div class="sub-news"></div>
+                   <div class="sub-news"></div>
+                   <div class="sub-news"></div>
+                   <div class="sub-news"></div>
+                </div>
+            </div>
+            <footer>
+                <div class="child-footer">
+                    <p style="margin-left:20px;">&copy Chang Pham. All rights reserved</p>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Term of Use</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="child-footer">
+                    <div class="sub-footer">
+                        <div class="alignment">
+                            <h4 style="color: white"><i class="fas fa-plus-square" style="padding-right: 5px;"></i>RELEASES</h4>
+                            <ul>
+                                <li><a href="#">Latest New</a></li>
+                                <li><a href="#">PC</a></li>
+                                <li><a href="#">Switch</a></li>
+                                <li><a href="#">3DS</a></li>
+                                <li><a href="#">PS4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-footer">
+                        <div class="alignment">
+                            <h4 style="color: white"><i class="far fa-gem" style="padding-right: 5px;"></i>NEWS</h4>
+                            <ul>
+                                <li><a href="#">Latest New</a></li>
+                                <li><a href="#">PC</a></li>
+                                <li><a href="#">Switch</a></li>
+                                <li><a href="#">3DS</a></li>
+                                <li><a href="#">PS4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-footer">
+                        <div class="alignment">
+                            <h4 style="color: white"><i class="fas fa-bullhorn" style="padding-right: 5px;"></i>SHOWS</h4>
+                            <ul>
+                                <li><a href="#">Audio Logs</a></li>
+                                <li><a href="#">More Sites</a></li>
+                                <li><a href="#">History Of</a></li>
+                                <li><a href="#">New Releases</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sub-footer">
+                        <div class="sub_sub-footer">
+                            <h4 style="color: whitesmoke;">TALK TO US</h4>
+                            <a href="#">Forums</a>
+                        </div>
+                        <div class="sub_sub-footer">
+                            <h4 style="color: rgb(190, 179, 179); margin-top: 5px;">GAME SITE</h4>
+                            <ul style="display: flex">
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="#"><i class="fab fa-reddit-square"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="sub_sub-footer">
+                            <h4 style="color: rgb(190, 179, 179); margin-top: 5px;">GAMESITE UNIVERSE</h4>
+                            <ul style="display: flex">
+                                
+                                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                <li><a href="#"><i class="fas fa-rss"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+            var counting = document.getElementById("text");
+            var counting1 = document.getElementById("text3");
+            var counting2 = document.getElementById("text2");
+            var counting3 = document.getElementById("text1");
+            count = 100;
+            function increasing()
+            {
+                count += 5;
+                counting.innerHTML = count + "K";
+                if(count >= 726)
+                {
+                    clearInterval(setting);
+                }
+            }
+            var setting  = setInterval(increasing,50);
+            function increasing1()
+            {
+                count += 3;
+                counting1.innerHTML = count + "K";
+                if(count >= 980)
+                {
+                    clearInterval(setting1);
+                }
+            }
+            var setting1 = setInterval(increasing1,50);
+            function increasing2()
+            {
+                count += 6;
+                counting2.innerHTML = count + "K";
+                if(count >= 832)
+                {
+                    clearInterval(setting2);
+                }
+            }
+            var setting2 = setInterval(increasing2,50);
+            function increasing3()
+            {
+                count += 4;
+                counting3.innerHTML = count + "K";
+                if(count >= 791)
+                {
+                    clearInterval(setting3);
+                }
+            }
+            var setting3 = setInterval(increasing3,4600);
+        </script>
+    </section>
+    <script src="../javascript/login.js"></script>
+    <script>
+        document.onmousemove = function(x)
+        {
+            document.getElementById("first").style.transform = "rotateY("+x.clientX/3 +"deg)";
+        }
+    </script>
+    <script src="../javascript/lazyload03demo.js">
+    </script>
+</body>
+</html>

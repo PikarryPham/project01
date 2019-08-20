@@ -1,0 +1,1 @@
+var bounce=document.getElementById("bounce-mot"),x=0,directionX=!0;function bouncing(){directionX?(650<=x&&(directionX=!1),x+=1):directionX||(x<=-10&&(directionX=!0),x-=1),bounce.style.left=x+"px"}var setting=setInterval(bouncing,70);

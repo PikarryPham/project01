@@ -1,0 +1,663 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    transition: all 0.5s;
+    font-family: 'Lato', sans-serif;
+}
+html,body{
+    scroll-behavior: smooth;
+    background:url("../WallaperforProject1Demo01/background.png");
+    background-attachment: fixed;
+    position: relative;
+}
+.opacity_layer{
+    width: 100%;
+    height: 992px;
+    position: absolute;
+    background-color: black;
+    opacity: .8;
+    z-index: 30;
+    top: 0;
+}
+.water {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%,-50%);
+    border-radius: 5px;
+    border-radius: 50%;
+    /*border-top: 5px solid transparent;*/
+    background-image: url("../WallaperforProject1Demo01/wave.png");
+    background-position: 0px 250px;
+    background-repeat: repeat-x;
+    animation: animate 12s linear infinite;
+    box-shadow: 0 0 0 10px #B02D79;
+    z-index: 40;
+}
+@keyframes animate {
+    50% {background-position: -2000px 0px;}
+    100% {background-position: 3000px -210px;}
+}
+.water>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45%;
+}
+/*---------------HAMBURGER MENU--------------*/
+.contenting{
+    display:flex;
+  }
+  .side{
+    background:#151014;
+    width: 90px;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: relative;
+  }
+  .menu-item{
+      margin-top: 10px;
+    background:#151014;
+    /*border-bottom:1px solid #d4d4d4;*/
+    display:flex;
+    transition: all 0.5s;
+  }
+  .menu-title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+  }
+  .menu-title>a{
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      padding-left: 10px;
+      white-space: nowrap;
+  }
+  .menu-title>p{
+      font-size: 20px;
+      color :white;
+      display: inline-block;
+      height: 100px;
+      line-height: 4;
+      padding: 10px 30px;
+      margin-left: 25px;
+      font-weight: bold;
+      cursor: default;
+      transition: all 0.5s;
+  }
+  p#p-menutitle{
+      padding: 10px;
+      padding-right: 0px;
+      margin-left: 20px;
+      word-break: keep-all;
+  }
+  a:hover{
+      color: #D11454;
+  }
+.menu-item{
+    background-color: #151014;
+    display: flex;
+    align-items: center; 
+}
+.special {
+    margin: 0px 36px;
+    height: 80px;
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+  }
+.special>li>a{
+    color: white;
+    font-size: 28px;
+    padding: 0px 10px;
+    transition: all 0.4s ease-in-out;
+  }
+.special>li>a:hover{
+      color: rgb(235, 59, 117,0.5);
+      transition: all 0.5s ease-in-out;
+  }
+.icon{
+    padding-left: 12px;
+    height:70px;
+    min-width:70px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+  }
+.icon>i{
+      font-size: 25px;
+      color: #D11454;
+}
+.closebtn{
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    display: none;
+}
+.arrows{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+.arrows>img{
+    width: 100px;
+    height: 100px;
+}
+/*-------------------MAIN'S CONTENT-----------------------*/
+.main{
+    height:922px;
+    /*background:#2f3036;*/
+    width:100%;
+}
+.content:nth-child(1){
+    width: 100%;
+    height: 482px;
+    background-color: #2f3036;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /*display: none;*/
+}
+.content:nth-child(2){
+    width: 100%;
+    height: 320px;
+    background-color: #1e1e22;
+}
+
+/*----------------------CONTENT THU NHAT------------------*/
+.child-content:nth-child(1)
+{
+    width: 100%;
+    height: 80%;
+    background: blueviolet;
+    display: flex;
+    justify-content: space-between;
+}
+/*--------------------SLIDESHOW RIGHT TO LEFT NOT USING JS ----------------------*/
+.slider-holder
+{
+    width: 1040px;
+    height: 400px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.image-holder
+{
+    width: 3120px;
+    background-color: lightcoral;
+    height: 400px;
+    clear: both;
+    left: 0px;
+    position: relative;
+    -webkit-transition: left 2s;
+    transition: left 2s;
+}
+.slider-image
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    width: 1040px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.slider-image:nth-child(1)
+{
+    background-color:#2f3036;
+}
+.slider-image:nth-child(2)
+{
+    background-color: #2f3036;
+}
+.slider-image:nth-child(3)
+{
+    background-color: #2f3036;
+}
+#slider-image-1:target ~ .image-holder
+{
+    left: 0px;
+}
+#slider-image-2:target ~ .image-holder
+{
+    left: -1040px;
+}
+#slider-image-3:target ~ .image-holder
+{
+    left: -2080px;
+}
+.button-holder
+{
+    position: relative;
+    top: -20px;
+}
+.slider-change
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #CF1151;
+    text-decoration: none;
+    color: white;
+    opacity: .7;
+}
+.slider-change:hover{
+    background-color: #1e1e22;
+}
+/*--------------------CONTENTS small THU HAI: TRONG CONTENT 1 ---------------*/
+.contents:nth-child(2){
+    width: 30%;
+    height: 88%;
+    background: whitesmoke;
+}
+.contents:nth-child(2)>.sub-contents:nth-child(1)
+{
+    width: 100%;
+    background-color: #2f3036;
+    height: 10%;
+}
+.contents:nth-child(2)>.sub-contents:nth-child(2)
+{
+    width: 100%;
+    background: url("../WallaperforProject1Demo01/littlenightmare.jpg");
+    background-position: top center;
+    background-size: cover;
+    height: 75%;
+}
+.contents:nth-child(2):hover{
+    box-shadow: 4px -4px 10px -2px rgba(0,0,0,0.77), -4px 4px 10px -2px rgba(0,0,0,0.77);
+    transform: scale(1.05);
+}
+.contents:nth-child(2)>.sub-contents:nth-child(3)
+{
+    width: 100%;
+    background-color: #2f3036;
+    height: 15%;
+}
+.contents:nth-child(1), .contents:nth-child(3)
+{
+    width: 32%;
+    height: 85%;
+    background: #2f3036;
+}
+/*--------------------CONTENTS small THU NHAT: BEN TRAI trong content 1 ------------------*/
+.contents:nth-child(1)>.sub-contents:nth-child(1){
+    width: 100%;
+    background-color: #2f3036;
+    height: 15%;
+}
+.contents:nth-child(1)>.sub-contents:nth-child(2){
+    width: 100%;
+    background-color: #2f3036;
+    height: 55%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 90px auto;
+}
+.contents:nth-child(1)>.sub-contents:nth-child(2)>.box-card:nth-child(1)>img
+{
+    width: 100%;
+    height: 100%;
+}
+.contents:nth-child(1)>.sub-contents:nth-child(2)>.box-card:nth-child(2)
+{
+    background-color: #2f3036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+.contents:nth-child(1)>.sub-contents:nth-child(2):hover{
+    box-shadow: 4px -4px 10px -2px rgba(0,0,0,0.77), -4px 4px 10px -2px rgba(0,0,0,0.77);
+}
+.contents:nth-child(1)>.sub-contents:nth-child(2)>.box-card:nth-child(3)
+{
+    grid-area: 2/1/3/3;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+/*-------------------------PLAYNOW BUTTON AREA ------------------------*/
+.contents:nth-child(1)>.sub-contents:nth-child(3){
+    width: 100%;
+    background-color: #2f3036;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sub-contents.button-play>button{
+    width: 50%;
+    height: 40%;
+    /*background: linear-gradient(-50deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);*/
+    background: linear-gradient(-50deg, #ffa951, #ff975e,#ff7f54,#f95c5c,#e54b4b);
+    font-weight: bold;
+    outline: none;
+    border-radius: 5px;
+    animation: anime 5s linear infinite;
+    box-shadow: 4px -4px 10px -2px #e54b4b, -5px 4px 10px -2px #FFA63D, 3px -3px 6px -2px #b45130;
+    border: none;
+}
+@keyframes anime{
+    0%{background-position: 10px 30px;} 
+    50%{background-position: 165px 30px;}
+   100%{background-position: 10px 42px;}
+}
+.sub-contents.button-play>button>a{
+    text-decoration: none;
+    color: wheat;
+}
+/*--------------------CONTENTS small THU BA: BEN TRAI trong content 1 ------------------*/
+.contents:nth-child(3)>.sub-contents:nth-child(1){
+    width: 100%;
+    background-color: #2f3036;
+    height: 15%;
+}
+.contents:nth-child(3)>.sub-contents:nth-child(2){
+    width: 100%;
+    background-color: #2f3036;
+    height: 55%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100px auto;
+}
+.contents:nth-child(3)>.sub-contents:nth-child(2)>.box-card:nth-child(1)>img
+{
+    width: 100%;
+    height: 100%;
+}
+.contents:nth-child(3)>.sub-contents:nth-child(2)>.box-card:nth-child(2)
+{
+    background-color: #2f3036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+.contents:nth-child(3)>.sub-contents:nth-child(2)>.box-card:nth-child(3)
+{
+    grid-area: 2/1/3/3;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.contents:nth-child(3)>.sub-contents:nth-child(3){
+    width: 100%;
+    background-color: #2f3036;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents:nth-child(3)>.sub-contents:nth-child(2):hover{
+    box-shadow: 4px -4px 10px -2px rgba(0,0,0,0.77), -4px 4px 10px -2px rgba(0,0,0,0.77);
+}
+/*-------------------CONTENT THU HAI--------------------*/
+.text>span{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    color: whitesmoke;
+}
+.recommend1{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.album{
+    background-color: #151014;
+    width: 19%;
+    height: 90%;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 2.5fr 1fr;
+    overflow: hidden;
+    position: relative;
+}
+.child-album:nth-child(1)
+{
+    background-color: #D11454;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.child-album.information
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    color: white;
+}
+.opacity{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    display: none;
+}
+.opa{
+    background-color: whitesmoke;
+    opacity: .4;
+    width: inherit;
+    height: inherit;
+}
+.button{
+    width: 120px;
+    height: 30px;
+    position: relative;
+    bottom: 60%;
+    left: 28%;
+    text-align: center;
+}
+.button>button{
+    background-color: orange;
+    width: 120px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    outline: orangered;
+    font-weight: bold;
+}
+@keyframes toptodown{
+    0%{top: 100%;}
+    100%{top: 0%}
+}
+.album:hover>.opacity{
+    display: block;
+    animation: toptodown 1.5s;
+}
+.info>p{
+    padding: 5px;
+}
+/*--------------------6 IMAGE OF CONTENT THU HAI-----------------*/
+#one>img{
+    width: 100%;
+    max-height: 100%;
+}
+#two>img{
+    width: 100%;
+    height: 100%;
+}
+#three>img{
+    width: 100%;
+    height: 100%;
+}
+#four>img{
+    width: 100%;
+    height: 100%;
+}
+#five>img{
+    width: 100%;
+    height: 100%;
+}
+/*-------------------CONTENT THU BA--------------------------------*/
+.content:nth-child(3)
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    height: 120px;
+}
+.footer{
+    height: 100%;
+}
+.footer:nth-child(1)
+{
+    /*background: orange;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.bounce{
+    width: 10%;
+    height: 80%;
+    /*background-color: lightblue;*/
+    position: relative;
+    left: 0px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bounce>span{
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #D11454;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: bounce 1s ease-in infinite;
+}
+span:nth-child(2)
+{
+    animation-delay: 0.2s;
+    background: #e54b4b;
+}
+span:nth-child(3)
+{
+    animation-delay: 0.4s;
+    background: #f95c5c;
+}
+span:nth-child(4)
+{
+    animation-delay: 0.6s;
+    background: #b93c3c;
+}
+@keyframes bounce{
+    0% {
+      transform: translateY(0px);
+    }
+    25%{
+      transform: translateY(-25px);
+    }
+    75% {
+      transform: translateY(25px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+}
+.footer:nth-child(2)
+{
+    /*background-color: brown;*/
+    text-align: center;
+}
+.custom-input
+{
+    position: relative;
+}
+.custom-input>input[type="email"]
+{
+    position: relative;
+    width: 65%;
+    height: 35px;
+    margin: 10px 0px;
+    background: #efefef;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 15px;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .3);
+    z-index: 10;
+}
+.custom-input>input[type="email"]::placeholder{
+    font-weight: bold;
+    color: #dadada;
+}
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 0.5s ease-in;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+}
+.btn-primary{
+    background: #ff7f54;
+    color: whitesmoke;
+    font-weight: bold;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, .1);
+	border-radius: 2px;
+	padding: 12px 36px;
+}
+.btn-primary:hover{
+    background: darken(#ff7f54, 3%);
+}
+.btn-primary:active {
+    background: #ff7f54;
+    box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, .2);
+}
+.btn-inside {
+    margin-left: -56px;
+}
+/*----------------------LAZY LOAD FACEBOOK ---------------------*/
+.lazy_main{
+    height:922px;
+    /*background:#2f3036;*/
+    width:100%;
+    background: #dadada;
+}
+.lazy_content:nth-child(1)
+{
+    width: 100%;
+    height: 482px;
+    background-color: #2f3036;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.lazy_content:nth-child(2){
+    width: 100%;
+    height: 320px;
+    background-color: #ccc;
+}
