@@ -6,3 +6,4 @@ Từ Home có thể đi được đến Release Page và Favourites Page
 
 
 @copyright Phạm Ngọc Thùy Trang
+Link github: https://pikarrypham.github.io/Project01/
