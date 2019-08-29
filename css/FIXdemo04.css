@@ -622,3 +622,103 @@ html,body{
     display: block;
     transition: all 0.5s ease-out;
 }
+.fas.fa-thumbs-up
+{
+    font-size: 25px;
+}
+@media only screen and (max-width: 576px)
+{
+    .slideshow{
+        height: 100%;
+    }
+    .slideshow>img.slides {
+        width: 100%;
+        max-height: 550px;
+        animation: fade 2s;
+    }
+    .picture{
+        position: absolute;
+        bottom: 23%;
+    }
+    .image{
+        width: 100px;
+        height: 100px;
+        background-position: center center;
+    }
+    .picture-child>p {
+        font-size: 17px;
+    }
+    .subpicture-text {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        color: whitesmoke;
+        margin-left: 10px;
+    }
+    .rate:not(:checked) > label {
+        font-size: 25px;
+    }
+    .rate {
+        padding-right: 10px;
+    }
+    .opacity>.opatext {
+        width: 30%;
+    }
+    .animation{
+        max-width: 35%;
+    }
+    .subchild:nth-child(2) {
+        width: 100%;
+        height: 55%;
+    }
+    .inside {
+        padding: 0px 20px;
+        font-weight: bold;
+    }
+    .subcontent{
+        margin: 15px 8px;
+    }
+    .fas.fa-bookmark, .fas.fa-thumbs-up{
+        font-size: 15px;
+    }
+    .inside>p{
+        font-size: 10px;
+    }
+    .menu-title>a {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+    .content.secondbox{
+        padding-left: 0px;
+    }
+    .information {
+        width: 100%;
+        height: 380px;
+        display: inline-flex;
+        margin: 25px 30px 20px 150px;
+        margin: 25px 0px 20px 0px;
+    }
+    .subcard:nth-child(1)>h2 {
+        color: whitesmoke;
+        font-size: 20px;
+        height: 35px;
+        text-align: center;
+    }
+    .child-list>p {
+        font-weight: bold;
+        font-size: 12px;
+    }
+    #whatnews>h2 {
+        font-size: 18px;
+    }
+    .container>p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .pic {
+        width: 35px;
+        height: 35px;
+        /* background-color: blue; */
+    }
+}

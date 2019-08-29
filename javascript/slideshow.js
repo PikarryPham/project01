@@ -21,7 +21,7 @@ function slideshowanddotted()
     {
         slideindex = 0;
     }
-    setTimeout(slideshowanddotted,3000);
+    setTimeout(slideshowanddotted,6000);
 }
 // mặc định hiển thị slide đầu tiên
 slideshowanddotted(slideindex = 0);

@@ -317,6 +317,7 @@ form>button{
     padding: 0px;
     font-weight: bold;
     color: white;
+    white-space: nowrap;
 }
 .thongtin>ul>li{
     padding: 5px;
@@ -1424,4 +1425,10 @@ footer{
     border-radius: 50%;
     animation: lazy 2s infinite ease-in;
     padding-right: 10px;
+}
+@media only screen and (max-width: 576px)
+{
+    .thongtin>ul{
+        font-size: 14px;
+    }
 }
