@@ -1,4 +1,4 @@
-# Project01 - Game Web
+# Project01 - Game Web - Code thuần JS, CSS
 Page gồm có 3 trang chính ( đã lược bỏ 1 trang trước đó)
 Trang Home: Username: pikarrypham2610@gmail.com
 pass: 26102000
